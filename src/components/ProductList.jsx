@@ -1,11 +1,11 @@
-import React from "react";
+import React from 'react'
 
 function ProductList() {
   //const products = getProducts();
   //zamockuj produkty zgodnie z bazą danych.
 
   // const products = [];
-  return <div className="ProductList"></div>;
+  return <div className="ProductList"></div>
 }
 
-export default ProductList;
+export default ProductList

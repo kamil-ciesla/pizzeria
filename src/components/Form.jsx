@@ -1,9 +1,9 @@
-import React from "react";
+import React from 'react'
 
 function Form() {
   //sendProduct(product);
 
-  return <div className="Form"></div>;
+  return <div className="Form"></div>
 }
 
-export default Form;
+export default Form
