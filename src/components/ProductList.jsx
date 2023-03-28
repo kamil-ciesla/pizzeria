@@ -1,8 +1,10 @@
+import React from "react";
+
 function ProductList() {
   //const products = getProducts();
   //zamockuj produkty zgodnie z bazą danych.
 
-  const products = [];
+  // const products = [];
   return <div className="ProductList"></div>;
 }
 
