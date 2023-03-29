@@ -1,7 +1,8 @@
 import React from 'react'
+import sendOrder from '../api/pizzeria'
 
 function Form() {
-  //sendProduct(product);
+  sendOrder()
 
   return <div className="Form"></div>
 }

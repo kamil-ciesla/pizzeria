@@ -1,22 +1,21 @@
-import React from "react";
-import "./ProductList.css";
-import getPizzaTypes from "../api/pizzeria.js";
-import { useCallback, useEffect, useState } from "react";
+import React from 'react'
+import './ProductList.css'
+import getPizzaTypes from '../api/pizzeria.js'
+import { useCallback, useEffect, useState } from 'react'
 
 function ProductList() {
-  const [pizzaTypes, setPizzaTypes] = useState({});
+  const [pizzaTypes, setPizzaTypes] = useState({})
 
   // declare the async data fetching function
   const fetchData = useCallback(async () => {
-    const data = await getPizzaTypes();
-    setPizzaTypes(data);
-  }, []);
+    const data = await getPizzaTypes()
+    setPizzaTypes(data)
+  }, [])
 
   // the useEffect is only there to call `fetchData` at the right time
   useEffect(() => {
-    fetchData();
-    console.log(pizzaTypes);
-  }, [fetchData]);
+    fetchData()
+  }, [fetchData])
 
   return (
     <div className="ProductList">
@@ -24,11 +23,11 @@ function ProductList() {
       {Object.keys(pizzaTypes).map((item, i) => (
         <h5>
           {item} ({pizzaTypes[item].price}PLN):
-          {pizzaTypes[item].ingredients.join(", ")}
+          {pizzaTypes[item].ingredients.join(', ')}
         </h5>
       ))}
     </div>
-  );
+  )
 }
 
-export default ProductList;
+export default ProductList
