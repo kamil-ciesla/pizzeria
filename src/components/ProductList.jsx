@@ -1,6 +1,6 @@
 import React from 'react'
 import './ProductList.css'
-import getPizzaTypes from '../api/pizzeria.js'
+import { getPizzaTypes } from '../api/pizzeria.js'
 import { useCallback, useEffect, useState } from 'react'
 
 function ProductList() {

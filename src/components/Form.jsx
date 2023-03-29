@@ -1,8 +1,11 @@
 import React from 'react'
-import sendOrder from '../api/pizzeria'
+import { sendOrder } from '../api/pizzeria'
 
 function Form() {
-  sendOrder()
+  const order = {
+    testOrderKey: 'testOrderValue',
+  }
+  //console.log(sendOrder(order))
 
   return <div className="Form"></div>
 }
