@@ -1,9 +1,9 @@
-import React from 'react'
+import React from "react";
 
-import './App.css'
-import Form from './components/Form'
-import ProductList from './components/ProductList'
-import Logo from './components/Logo'
+import "./App.css";
+import Form from "./components/Form";
+import ProductList from "./components/ProductList";
+import Logo from "./components/Logo";
 
 function App() {
   return (
@@ -12,7 +12,7 @@ function App() {
       <ProductList></ProductList>
       <Form></Form>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
