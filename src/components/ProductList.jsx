@@ -18,13 +18,13 @@ function ProductList() {
   }, [fetchData])
 
   return (
-    <div className="ProductList">
+    <div className="ProductList bg-dark m-5">
       <h2>Menu:</h2>
       {Object.keys(pizzaTypes).map((item, i) => (
-        <h5>
-          {item} ({pizzaTypes[item].price}PLN):
+        <p key={i}>
+          {item} ({pizzaTypes[item].price}PLN):{' '}
           {pizzaTypes[item].ingredients.join(', ')}
-        </h5>
+        </p>
       ))}
     </div>
   )
