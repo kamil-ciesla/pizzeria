@@ -1,10 +1,9 @@
 import { initializeApp } from 'firebase/app'
 import { getFirestore } from 'firebase/firestore'
-import { config } from '../../config'
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: config.FIRESTORE_API_KEY,
+  apiKey: import.meta.env.VITE_FIRESTORE_API_KEY,
   authDomain: 'pizzeria-c5c33.firebaseapp.com',
   projectId: 'pizzeria-c5c33',
   storageBucket: 'pizzeria-c5c33.appspot.com',
