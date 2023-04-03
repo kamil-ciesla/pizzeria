@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { Formik, Form, Field, ErrorMessage } from 'formik'
 import { v4 as uuidv4 } from 'uuid'
 import * as Yup from 'yup'
+import { sendOrder } from '../api/pizzeria'
 
 // import { sendOrder } from '../api/pizzeria'
 
@@ -59,12 +60,13 @@ function MyForm() {
   const [extra, setExtra] = useState('')
 
   const handleSubmit = (values, { setSubmitting }) => {
-    console.log(values)
     values.pizzas.extras = extras.map((json) => json.value)
     values.pizzas.sizeInCms = Number(values.pizzas.sizeInCms)
     values.drinks.volumeInMl = Number(values.drinks.volumeInMl)
     setSubmitting(false)
+    sendOrder(values)
     console.log(values)
+    alert('Zamówienie zostało złożone pomyślnie!')
     // const order = {
     //   testOrderKey: 'testOrderValue',
     // }
