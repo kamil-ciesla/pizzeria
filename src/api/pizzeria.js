@@ -11,6 +11,7 @@ export async function getPizzaTypes() {
 
 export async function sendOrder(orderObject) {
   console.log('start sending order')
-  await setDoc(doc(db, 'orders', '54321'), orderObject)
+  const id = String(Math.floor(Math.random() * 9999999))
+  await setDoc(doc(db, 'orders', id), orderObject)
   console.log('end sending order')
 }
