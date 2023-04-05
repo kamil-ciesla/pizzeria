@@ -30,7 +30,7 @@ const validationSchema = Yup.object().shape({
   }),
   orders: Yup.object().shape({
     takeaway: Yup.boolean(),
-    tip: Yup.number(),
+    tip: Yup.number().min(0, 'Tip must be greater than or equal to zero'),
   }),
   drinks: Yup.object().shape({
     name: Yup.string(),
