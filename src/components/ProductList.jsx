@@ -9,7 +9,7 @@ function ProductList() {
   // declare the async data fetching function
   const fetchData = useCallback(async () => {
     const data = await getPizzaTypes()
-    setPizzaTypes(data)
+    setPizzaTypes({ data })
   }, [])
 
   // the useEffect is only there to call `fetchData` at the right time
@@ -22,22 +22,22 @@ function ProductList() {
       <h2>Menu</h2>
       {Object.keys(pizzaTypes).map((item, i) => (
         <p key={i}>
-
           <table class="table table-dark">
-          <thead>
-            <tr>
-              <th scope="col">{item}</th>
-              <th scope="col"></th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row">{pizzaTypes[item].ingredients.join(', ')}</th>
-              <th scope="row" class="row justify-content-end">{pizzaTypes[item].price} PLN</th>
-            </tr>
-          </tbody>
-        </table>
-        
+            <thead>
+              <tr>
+                <th scope="col">{item}</th>
+                <th scope="col"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">{pizzaTypes[item].ingredients.join(', ')}</th>
+                <th scope="row" class="row justify-content-end">
+                  {pizzaTypes[item].price} PLN
+                </th>
+              </tr>
+            </tbody>
+          </table>
         </p>
       ))}
     </div>
